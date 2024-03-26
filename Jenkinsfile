@@ -15,13 +15,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the app';
-                sh 'npm install';
+                bat 'npm install';
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing the app';
-                sh 'npm test';
+                bat 'npm test';
             }
         }
     }
