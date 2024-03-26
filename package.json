@@ -10,7 +10,6 @@
   },
   "scripts": {
     "test": "mocha tests/*.js",
-    "start": "node index.js",
-    "deploy": "npm run build && echo 'Deploying application'"
+    "start": "node index.js"
   }
 }
