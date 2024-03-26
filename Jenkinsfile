@@ -11,5 +11,12 @@ pipeline {
                 checkout scm
             }
         }
+//adding build stage:
+        stage('Build') {
+            steps {
+                echo 'Building the app';
+                sh 'npm install';
+            }
+        }
     }
 }
