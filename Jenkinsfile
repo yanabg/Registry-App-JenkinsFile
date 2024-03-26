@@ -1,29 +1,30 @@
 pipeline {
     agent any
-    
+
     stages {
+
         stage('Checkout') {
             steps {
-                checkout scm
+                echo 'Checking out the app';
+                checkout scm;
             }
         }
-        
         stage('Build') {
             steps {
-                sh 'npm install'
+                echo 'Building the app';
+                sh 'npm install';
             }
         }
-        
         stage('Test') {
             steps {
-                sh 'npm test'
+                echo 'Testing the app';
+                sh 'npm test';
             }
         }
-        
-        stage('Deploy') {
+ /*       stage('Deploy') {
             steps {
-                sh 'npm run deploy'
+                echo 'Deploying....'
             }
-        }
+        }*/
     }
 }
